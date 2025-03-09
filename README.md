@@ -13,25 +13,14 @@ Then go to http://localhost:8080
 
 ## Development
 
-### Server
+```shell
+$ docker-compose up
+```
+- [client](http://localhost:5173)
+- [adminer](http://localhost:8080) (user: postgres, password: changeit)
+- [Thunder client](http://localhost:3000/self) (use HTTP Headers Cookie:sid="from browser devtools")
 
 ```shell
-$ cd server
-
-# start the PostgreSQL database
-$ docker compose up -d
-
-# start the server
-$ npm run dev
+$ docker exec -it pg_container bash
+$ psql -U postgres
 ```
-
-### Client
-
-```shell
-$ cd vue-client
-
-# start the client
-$ npm run dev
-```
-
-Then go to http://localhost:5173
