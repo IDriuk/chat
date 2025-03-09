@@ -20,6 +20,14 @@ $ docker-compose up
 - [adminer](http://localhost:8080) (user: postgres, password: changeit)
 - [Thunder client](http://localhost:3000/self) (use HTTP Headers Cookie:sid="from browser devtools")
 
+Run tests
+```shell
+$ docker exec -it express_container bash
+$ cd app
+$ npm run test
+```
+
+Open postgres in terminal
 ```shell
 $ docker exec -it pg_container bash
 $ psql -U postgres
