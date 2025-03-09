@@ -8,6 +8,7 @@
   "scripts": {
     "start": "node entrypoint.js",
     "dev": "node index.js",
+    "docker-dev": "nodemon entrypoint.js",
     "test": "mocha --exit --recursive",
     "format": "prettier -w index.js src/ test/"
   },
@@ -33,6 +34,7 @@
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
     "prettier": "^3.0.3",
-    "socket.io-client": "^4.7.2"
+    "socket.io-client": "^4.7.2",
+    "nodemon": "^3.1.9"
   }
 }
