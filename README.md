@@ -24,3 +24,8 @@ $ docker-compose up
 $ docker exec -it pg_container bash
 $ psql -U postgres
 ```
+
+Get ip for wifi (like 192.168.1.5) to browse from phone
+```shell
+$ ifconfig | grep inet
+```
