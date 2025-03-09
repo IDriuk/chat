@@ -5,7 +5,8 @@ Chat app with Vue client, Express server and Postgres database.
 ## How to use
 
 ```shell
-$ docker compose up -d
+$ docker-compose -f compose.prod.yaml up -d
+$ docker-compose -f compose.prod.yaml down
 ```
 
 Then go to http://localhost:8080
