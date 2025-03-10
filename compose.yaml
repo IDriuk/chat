@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres
+    image: postgres:17.4
     container_name: pg_container
     networks:
       - pgnet
@@ -18,7 +18,7 @@ services:
       timeout: 5s
       retries: 5
   adminer:
-    image: adminer
+    image: adminer:4.17.1
     container_name: admin_container
     depends_on:
       - db
@@ -28,7 +28,7 @@ services:
     ports:
       - 8080:8080
   server: 
-    image: node
+    image: node:23.9
     container_name: express_container
     depends_on:
       db:
@@ -41,7 +41,7 @@ services:
       - ./server:/app
     command: bash -c "cd /app && npm install && npm run docker-dev"
   client:
-    image: node
+    image: node:23.9
     container_name: vue_container
     depends_on:
       - server
